@@ -2,6 +2,9 @@
 
 namespace Product.Models
 {
+    /// <summary>
+    /// Product model.
+    /// </summary>
     public class Product
     {
         private decimal weight;
@@ -19,6 +22,10 @@ namespace Product.Models
 
         public Type Type { get; set; }
 
+        /// <summary>
+        /// Mathematical rounding is preferred.
+        /// </summary>
+        /// <returns>View or type is mathematically rounded?</returns>
         private bool IsGreatPriority()
         {
             return View.RoundMode == RoundMode.Math || Type.RoundMode == RoundMode.Math;
